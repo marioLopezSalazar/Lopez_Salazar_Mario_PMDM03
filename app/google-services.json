@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "151367777522",
+    "project_id": "lopez-salazar-mario-pmdm03",
+    "storage_bucket": "lopez-salazar-mario-pmdm03.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151367777522:android:555522c51e1600b19fe46b",
+        "android_client_info": {
+          "package_name": "com.iesaguadulce.lopez_salazar_mario_pmdm03"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151367777522-sa6n71otaghtmfkmmrmvnf216gv989lj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesaguadulce.lopez_salazar_mario_pmdm03",
+            "certificate_hash": "6ccd73c22912f5e2a060e488808f0e24ccd00ef5"
+          }
+        },
+        {
+          "client_id": "151367777522-1jk9glplbt5o76t1vnq7t90ffnkbqfek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVd1Ny2QGQ4QyiZW4YytgG02Ig5v5Y1fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151367777522-1jk9glplbt5o76t1vnq7t90ffnkbqfek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

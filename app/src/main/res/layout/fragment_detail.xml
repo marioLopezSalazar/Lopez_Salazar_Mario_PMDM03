@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- POKEMON DETAILS (PICTURE + INDEX_&_NAME + TYPE + WEIGHT + HEIGHT + RELEASEBUTTON) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/picture"
+            style="@style/PictureDetailStyle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/index_and_name"
+            style="@style/NameDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/type"
+            style="@style/TypeDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/weight"
+            style="@style/MeasureDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/height"
+            style="@style/MeasureDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/release" />
+
+    </LinearLayout>
+</android.widget.ScrollView>

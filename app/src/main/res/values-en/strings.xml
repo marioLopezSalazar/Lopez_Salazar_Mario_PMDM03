@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ICON LAUNCHER & LOGIN -->
+    <string name="app_name">\u00A0 Pokémon MLS \u00A0</string>
+    <string name="authentication_failed">Authentication failed.</string>
+
+
+    <!-- NAVIGATION -->
+    <string name="my_pokemon">Caught Pokémon</string>
+    <string name="pokedex">Pokédex</string>
+    <string name="settings">\u00A0 Settings \u00A0</string>
+
+
+    <!-- CAUGHT AND DETAIL FRAGMENT -->
+    <string name="pokeball">Pokéball</string>
+    <string name="no_caught_pokemon">You don\'t have any caught Pokémon yet.</string>
+    <string name="one_caught_pokemon">You have 1 caught Pokémon.</string>
+    <string name="you_already_have">You already have</string>
+    <string name="caught_pokemon">caught Pokémon.</string>
+    <string name="no_data_pokemon_list">The information about your Pokémon is currently unavailable.</string>
+
+    <string name="unknownType">(?)</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="noDataPokemon">Information about this Pokémon is not available.</string>
+    <string name="release">Release Pokémon</string>
+
+    <string name="released">released</string>
+    <string name="release_failed">"Could not release "</string>
+
+
+    <!-- POKÉDEX FRAGMENT -->
+    <string name="pokedex_unavailable">Pokédex is currently unavailable.</string>
+
+    <string name="has_been_caught">has been caught.</string>
+    <string name="uncaught_pokemon">"Could not catch "</string>
+
+    <string name="generations">Generations</string>
+    <string name="pokedex_updated">Pokédex updated.</string>
+
+
+    <!-- APP PREFERENCES -->
+    <string name="switch_to_english">Switch to Spanish</string>
+    <string name="switch_to_english_summary">Current language: English</string>
+    <string name="allow_release">Release Pokémon</string>
+    <string name="allow_release_summary">Allows you to empty your Pokéballs</string>
+    <string name="look">Appearance</string>
+
+
+    <!-- SESSION MANAGER -->
+    <string name="pokemon_trainer">"Pokémon Trainer: "</string>
+    <string name="unknown">unknown</string>
+
+    <string name="close_session">Log out</string>
+    <string name="close_session_summary">Take a break for a while</string>
+    <string name="close_session_confirmation">Are you sure you want to log out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sign_out_done">Logged out successfully.</string>
+    <string name="sign_out_error">An error occurred while managing the session.</string>
+
+    <string name="delete_user">Delete user</string>
+    <string name="delete_user_summary">Release all your Pokémon and stop training</string>
+    <string name="delete_user_confirmation">Are you sure you want to release all your Pokémon and stop being a trainer?</string>
+    <string name="password_requirement">Enter your password to delete your user:</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password_visibility">Show/Hide password</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_user_done">Trainer deleted!</string>
+    <string name="delete_user_failed">Could not delete the user. You are still a trainer!</string>
+
+
+    <!-- ABOUT -->
+    <string name="app">Application</string>
+    <string name="about">About</string>
+    <string name="about_summary">Developer and version</string>
+    <string name="version">Version</string>
+
+</resources>

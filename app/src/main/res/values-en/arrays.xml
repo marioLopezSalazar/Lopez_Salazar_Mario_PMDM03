@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+
+    <string-array name="generations_list">
+        <item>Up to 1st generation: 1–151</item>
+        <item>Up to 2nd generation: 1–251</item>
+        <item>Up to 3rd generation: 1–386</item>
+        <item>Up to 4th generation: 1–493</item>
+        <item>Up to 5th generation: 1–649</item>
+        <item>Up to 6th generation: 1–721</item>
+        <item>Up to 7th generation: 1–809</item>
+        <item>Up to 8th generation: 1–905</item>
+        <item>Up to 9th generation: 1–1025</item>
+    </string-array>
+    <string-array name="generations_values">
+        <item>151</item>
+        <item>251</item>
+        <item>386</item>
+        <item>493</item>
+        <item>649</item>
+        <item>721</item>
+        <item>809</item>
+        <item>905</item>
+        <item>1025</item>
+    </string-array>
+
+</resources>

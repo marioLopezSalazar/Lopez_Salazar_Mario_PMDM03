@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/capturedFragment">
+
+    <fragment
+        android:id="@+id/capturedFragment"
+        android:name="com.iesaguadulce.lopez_salazar_mario_pmdm03.caught.CaughtFragment"
+        android:label=""
+        tools:layout="@layout/fragment_caught" >
+        <action
+            android:id="@+id/action_capturedFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_capturedFragment_to_pokedexFragment"
+            app:destination="@id/pokedexFragment" />
+        <action
+            android:id="@+id/action_capturedFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokedexFragment"
+        android:name="com.iesaguadulce.lopez_salazar_mario_pmdm03.pokedex.PokedexFragment"
+        android:label=""
+        tools:layout="@layout/fragment_pokedex" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.iesaguadulce.lopez_salazar_mario_pmdm03.SettingsFragment"
+        android:label="@string/settings" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.iesaguadulce.lopez_salazar_mario_pmdm03.caught.DetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_detail" />
+
+</navigation>

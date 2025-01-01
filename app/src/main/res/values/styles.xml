@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- LOGIN ACTIONBAR -->
+    <style name="LoginActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/LoginActionBarTitleStyle</item>
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <style name="LoginActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/pokemon_solid</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+
+    <!-- MAIN ACTIVITY TOOLBAR -->
+    <style name="PokemonActionBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/PokemonActionBarTitleStyle</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="PokemonActionBarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/pokemon_solid</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <!-- BOTTOM NAVIGATION -->
+    <style name="PokemonBottomNavigationStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationTextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationTextStyle</item>
+        <item name="itemTextColor">@color/colorAccent</item>
+        <item name="android:background">@color/colorBottom</item>
+        <item name="itemIconTint">@color/colorAccent</item>
+        <item name="itemHorizontalTranslationEnabled">true</item>
+    </style>
+
+    <style name="BottomNavigationTextStyle" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/pokemon_solid</item>
+        <item name="fontFamily">@font/pokemon_solid</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+
+    <!-- CAUGHT FRAGMENT -->
+    <style name="CaughtCardViewStyle">
+        <item name="cardCornerRadius">25dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="PictureCaughtCardViewStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="NameCaughtCardViewStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="TypeCaughtCardViewStyle">
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="PokeballCardViewStyle">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:src">@drawable/pokeball</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:contentDescription">@string/pokeball</item>
+    </style>
+
+
+    <!-- DETAIL FRAGMENT -->
+    <style name="PictureDetailStyle">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="NameDetailStyle">
+        <item name="android:textSize">35sp</item>
+        <item name="android:fontFamily">@font/pokemon_solid</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="TypeDetailStyle">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="MeasureDetailStyle">
+        <item name="android:fontFamily">@font/fredoka</item>
+    </style>
+
+
+    <!-- POKÉDEX FRAGMENT -->
+    <style name="PokedexCardViewStyle">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="PokedexNameStyle">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+
+    <!-- DROP USER -->
+    <style name="PasswordLayoutStyle">
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="PasswordEditTextStyle">
+        <item name="android:hint">@string/enter_your_password</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+    </style>
+
+    <style name="PasswordEyeButtonStyle">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:contentDescription">@string/password_visibility</item>
+        <item name="android:src">@drawable/eye_opened</item>
+    </style>
+
+
+    <!-- ALERT DIALOGS -->
+    <style name="AlertDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog"/>
+
+</resources>

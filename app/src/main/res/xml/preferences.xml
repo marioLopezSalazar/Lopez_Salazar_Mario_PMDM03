@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- APP PREFERENCES -->
+    <PreferenceCategory>
+
+        <SwitchPreference
+            app:key="english"
+            app:title="@string/switch_to_english"
+            app:summary="@string/switch_to_english_summary"
+            app:icon="@drawable/language"
+            app:defaultValue="false"/>
+
+        <SwitchPreference
+            app:key="release"
+            app:title="@string/allow_release"
+            app:summary="@string/allow_release_summary"
+            app:icon="@drawable/opened_pokeball"
+            app:defaultValue="false"/>
+
+        <ListPreference
+            app:key="light_night"
+            app:title="@string/look"
+            app:icon="@drawable/theme_light_dark"
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/theme_options"
+            app:entryValues="@array/theme_values"
+            app:defaultValue="system" />
+
+    </PreferenceCategory>
+
+
+    <!-- SESSION MANAGEMENT -->
+    <PreferenceCategory
+        app:key="session_category">
+
+        <ListPreference
+            app:key="pokedex_count"
+            app:title="@string/generations"
+            app:icon="@drawable/pokedex"
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/generations_list"
+            app:entryValues="@array/generations_values"
+            app:defaultValue="151" />
+
+        <Preference
+            app:key="close_session"
+            app:title="@string/close_session"
+            app:summary="@string/close_session_summary"
+            app:icon="@drawable/snorlax_zzz"/>
+
+        <Preference
+            app:key="delete_user"
+            app:title="@string/delete_user"
+            app:summary="@string/delete_user_summary"
+            app:icon="@drawable/togepi_crying"/>
+
+    </PreferenceCategory>
+
+
+    <!-- ABOUT -->
+    <PreferenceCategory app:title="@string/app">
+        <Preference
+            app:key="about"
+            app:title="@string/about"
+            app:summary="@string/about_summary"
+            app:icon="@drawable/pikachu_blue"/>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
