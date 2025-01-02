@@ -20,10 +20,18 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 * **Autenticación**: La navegación de la APP arranca con la autenticación del ususario. Basada en la interfaz prediseñada que ofrece *Firebase Authentication*, facilita el registro y login de los entrenadores Pokémon de dos formas:
   * <ins>Email y contraseña</ins>, permitiendo además introducir un nombre o identificador personalizado.
   * <ins>Cuenta de Google</ins>, la forma más rápida de loguearse.
+    
+  ![Login](https://github.com/user-attachments/assets/777d88e8-5015-4b59-ba3d-449ce92baca6 "Ventana de Login")
 * **Pokédex**: Ofrece un listado de los Pokémon, obtenido en tiempo real desde la [API Pokémon](https://pokeapi.co/docs/v2). Por defecto se muestra solamente la primera generación de Pokémon, si bien puede configurarse (en la pestaña *Configuración*, opción *Generaciones*) para mostrar **hasta la 9ª generación Pokémon**.
+
+    ![Pokedex](https://github.com/user-attachments/assets/5d198887-5d76-4efc-99c3-c89412ae3b89 "Ventana de Login") 
+    ![Generations](https://github.com/user-attachments/assets/132bf172-4585-4b42-beec-e5821f280fb2 "Opción para elegir el tamaño de la Pokédex")
 
   La *captura de un Pokémon* se realiza con solo tocar sobre su nombre, apareciendo entonces los detalles del mismo. Los Pokémon que ya han sido capturados no pueden volver a capturarse (salvo que sean liberados previamente), y aparecen claramente marcados en la Pokédex mediante una Pokéball.
 * **Pokémon capturados**: En esta pestaña aparecen todos los Pokémon capturados por el entrenador, ordenados por su índice. En la vista general aparecen su imagen y su tipo (o tipos). Pulsando sobre el Pokémon se puede acceder a más detalles del mismo (imagen más grande, peso y altura).
+
+    ![Caught](https://github.com/user-attachments/assets/9d870f04-0a0e-46c7-a69d-70fd0d1cc376 "Ventana de Pokémon capturados")
+    ![Detail](https://github.com/user-attachments/assets/69e513c5-0026-4113-91bf-deb1c8d977da "Ventana de detalle de Pokémon") 
 
   El listado de Pokémon capturados, así como los detalles de cada Pokémon, son almacenados en la nube vinculados a la cuenta de usuario (en la base de datos *Firebase Firestore*). Así, cuando el entrenador se loguee de nuevo más adelante (en este o en otro dispositivo), sus Pokémon capturados seguirán estando disponibles.
 * **Liberar Pokémon**: Los Pokémon capturados pueden ser liberados de dos maneras:
@@ -34,6 +42,11 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 
   Cuando un Pokémon es liberado, naturalmente es eliminado de la lista de Pokémon capturados y deja de estar marcado como "Capturado" en la Pokédex, volviendo a estar disponible para ser capturado.
 * **Ajustes**: La ventana de ajustes ofrece las siguientes posibilidades, algunas de ellas ya mencionadas:
+
+  ![Settings-1](https://github.com/user-attachments/assets/57ef8116-db6e-4493-8bc7-dddc2debf391) 
+  ![Settings-2](https://github.com/user-attachments/assets/367d3e39-0342-472d-9860-adf5b4320a1c)
+
+
   * **Idioma**: La aplicación puede configurarse para ser utilizada en español y en inglés. Además de los propios textos de la APP, también se traduce el tipo (o tipos) del Pokémon, así como el formato numérico de los pesos y las alturas.
   * **Liberar Pokémon**: Como ya se ha indicado, habilita o deshabilita la posibilidad de que el entrenador pueda liberar individualmente algunos de sus Pokémon.
   * **Apariencia**: Esta opción permite entrenar con dos modos de color e iluminación: ***Diurno*** y ***Nocturno***, o simplemente utilizar el tema predefinido por el usuario en el dispositivo móvil.
@@ -66,10 +79,10 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 * [**Firebase**](https://firebase.google.com/): Plataforma de almacenamiento en la nube que facilita el desarrollo de aplicaciones. Esta aplicación utiliza:
     * <ins>Authentication</ins> para la autenticación y gestión de usuarios. Concretamente se utiliza la inferfaz preconstruida de logueo provista por Firebase.
     * <ins>Firestore database</ins>, base de datos No-SQL empleada para almacenar la colección de Pokémon de cada entrenador, así como el listado de *tipos de Pokémon* localizados al idioma español.
-* **SharedPreferences**: API Android que permite almacenar y recuperar datos clave-valor de forma persistente, ideal para guardar configuraciones o preferencias de usuario, de forma privada y persistente.
+* **SharedPreferences**: API Android que permite almacenar y recuperar datos clave-valor de forma persistente, ideal para guardar configuraciones o preferencias de usuario.
 * **Picasso**: Biblioteca de código abierto desarrollada por Square que facilita la carga y almacenamiento en caché de imágenes en aplicaciones Android. Empleada para descargar y manejar las imágenes de los Pokémon.
 * **Android Navigation**: Componente que facilita la implementación de la navegación en aplicaciones Android. Permite mover a los usuarios entre pantallas (en este caso, *fragments*) y gestionar elementos relacionados con la navegación, como el manejo de la pila de retroceso.
-* **BottomNavigationView**: Componente de interfaz de usuario que facilita la navegación entre diferentes secciones utilizando una barra de navegación en la parte inferior de la pantalla. Proporciona un acceso rápido y consistente a cada sección. Este componente se integra fácilmente con Navigation Component.
+* **BottomNavigationView**: Componente de interfaz de usuario que facilita la navegación entre diferentes secciones utilizando una barra de navegación en la parte inferior de la pantalla. Proporciona un acceso rápido y consistente a cada sección. Este componente se integra fácilmente con Android Navigation.
 * **RecyclerView**: Componente de interfaz de usuario utilizado para mostrar grandes conjuntos de datos de forma eficiente, en este caso en forma de lista. Ofrece flexibilidad y rendimiento al reutilizar vistas mediante un patrón llamado "ViewHolder". RecyclerView permite personalizar fácilmente la presentación de los elementos mediante LayoutManagers (en este caso CardViews). Su diseño modular lo hace ideal para listas complejas y dinámicas, con soporte nativo para arrastrar y soltar, y también para deslizamiento, tal y como se emplea en esta aplicación.
 
 
