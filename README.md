@@ -92,4 +92,76 @@ Para la ejecución de la aplicación es necesario disponer de un dispositivo emu
 
 ## CONCLUSIONES DEL DESARROLLADOR
 
+#### MainActivity y navegación 
+La construcción de la aplicación comenzó con la implementación de la **navegación**, creando el `navGraph` y los tres `fragments` de primer nivel de navegación (Pokédex, Pokémon capturados y Configuración `SharedPreferences`) y configurando lo anterior con el `BottomNavigationView`. He aprendido que un uso diestro de los atributos del `navGrap` facilita la configuración enormemente.
+
+El diseño de esta **vista principal** ha sido modificado a lo largo del proyecto, pues inicialmente se hacía uso de la ActionBar por defecto pero posteriormente se hizo necesario emplear una ToolBar personalizada y un cambio en los layouts para conseguir un diseño visual óptimo en los cambios de fragmento.
+
+
+#### Autenticación
+El arranque de **Firebase** y la implementación de la **autenticación** (login y logout) resultó sencilla, siguiendo las indicaciones de la documentación y de la [profesora](https://github.com/lbarmar).
+
+Decidí después implementar la opción de **eliminar usuario**, que ha supuesto un auténtico desafío:
+* Descubrí que era necesaria la reautentificación del usuario para que la llamada de borrado de usuario tuviese efecto. Este aspecto no aparece en la documentación básica de Firebase.
+* La reautentificación se realiza de forma diferente según el método de autentificación.
+* Ha sido necesario implementar un diálogo personalizado para requerir al usuario su contraseña. Esto ha sido una oportunidad para investigar sobre `AlertDialog` personalizados y la personalización del `EditText`.
+
+#### Diseño de los RecyclerView
+Esta parte se desarrolló utilizando datos de ejemplo, creando objetos de modelo directamente en código.
+Cada uno de los dos RecyclerView funciona con una `List` subyacente, una sobre objetos de la clase `PokémonId` y otra sobre objetos de la clase `Pokémon` que extiende a la anterior. Esto ha facilitado el chequeo ágil sobre si un Pokémon está o no capturado, lo que facilita las operaciones de actualización en la Pokédex.
+En fases posteriores se ha añadido la funcionalidad de liberar Pokémon mediante deslizamiento de la CardView, para ello he investigado sobre la clase `ItemTouchHelper`. Aquí lo más difícil ha sido integrar esta clase de forma limpia con el resto de clases que componen la funcionalidad del RecyclerView.
+
+#### Descarga de la API Pokémon
+El diseño de la intefaz de llamadas y el *adaper* ha resultado sencillo. Más complicado ha resultado el diseño de una estructura de clases que encaje con la estructura JSON de la API, siendo necesarios numerosos reajustes y pruebas hasta obtener los resultados deseados.
+En este momento surgió la necesidad de comenzar a trabajar con rutinas asíncronas (callbacks, `onCompleteListener`, objetos `Task`...) y la comunicación asíncrona entre clases y métodos, aspecto que se iría complicando al implementar otras funcionalidades.
+
+#### Guardado y descarga de Pokémon capturados
+Aquí el asunto se complicó, pues previamente fue necesario entender la estructura de datos que maneja Firestore, y cómo funciona el sistema de referencias, documentos y colecciones. Por otra parte, la necesidad de hacer robustas las funcionalidades lleva a tener que anidar las callbacks, para que las tareas que dependen una de otra se realicen de forma consecutiva (no paralela) y se controlen los posibles errores.
+
+Una vez implementada esta parte, se hizo necesario coordinar el flujo completo de carga de la aplicación (Pokédex y Pokémon capturados, e integración de ambas).
+
+Se consideró conviente mostrar siempre los Pokémon ordenados mediante su índice, que se ha conseguido de manera simple haciendo que `PokemonId implements Comparable` y haciendo uso del método `List.sort()`.
+
+#### Detalle de los Pokémon
+Esta sección no ha supuesto demasiadas complicaciones, más allá de la implementación de métodos auxiliares para mostrar los datos numéricos en unidades habituales en nuestro contexto.
+
+#### Captura de Pokémon
+En esta acción ya se ven involucradas muchas clases de la aplicación. Como aspectos a reseñar:
+   * El bloqueo de los eventos para evitar *doble captura*, tanto momentánea (por doble toque) como sobre Pokémon previamente capturados.
+   * La necesidad de coordinar varios procesos asíncronos que dependen uno del otro, y que deben ser revertidos si una de las acciones falla.
+   * La actualización de las vistas de forma coherente.
+
+#### Liberación de Pokémon
+De manera similar a lo anterior, están involucrados varios procesos asíncronos que dependen uno del otro. Se ha cuidado que no ocurran situaciones inconsistentes en caso de error.
+Ha sido necesario investigar un poco sobre cómo actualizar el RecyclerView tras la eliminación del objeto pues, al contrario de lo que sucede durante la captura, en la liberación no se produce un cambio de vista (y por tanto el reinflado automático).
+La configuración de la *SharedPreference* no ha supuesto dificultad.
+
+#### Tamaño de la Pokédex
+Una funcionalidad adicional que me ha permitido profundizar en el diseño de las `SharedPreferences` mediante el uso del fichero `arrays.xml`.
+Realmente no ha supuesto demasiadas modificaciones sobre lo ya implementado, simplemente introducir algunas modificaciones para el caso de desear liberar un Pokémon que ya no está presente en la Pokédex.
+
+#### Estilo visual
+La elección de la paleta de colores, las tipografías y los iconos ha resultado un proceso creativo.
+
+Lo más complicado de esta parte (y posiblemente de toda la aplicación) ha sido descubrir los atributos concretos a emplear para personalizar las propiedades de los elementos visuales, especialmente de la `ToolBar` y de la `BottomNavigationView`.
+
+También ha resultado especialmente complicado personalizar la interfaz preconstruida de *Login*, pues el estilo base empleado por Firebase no es el mismo del resto de mi aplicación. Ha sido necesario, por tanto, diseñar un nuevo `<theme>` para esta actividad.
+
+#### Idioma
+Más allá de la traducción de los ficheros `strings.xml` y `arrays.xml`, disponer de los *tipos de Pokémon* en ambos idomas ha requerido una toma de decisión. Con el objetivo de continuar el espíritu intencional de este proyecto, que maneja datos localizados fuera de la propia aplicación, se ha decidido utilizar otra colección de Firestore para almacenar el diccionario de traducción de *tipos de Pokémon*. La descarga se realiza de manera análoga a la descarga de Pokémon capturados.
+
+Cuando el usuario cambia la preferencia, se realiza la descarga del correspondiente diccionario (en este caso, el diccionario *types-ES*). Al mostrar los datos al usuario, un método auxiliar efectúa la traducción.
+
+#### Documentación
+Finalmente, el proceso de documentación JavaDoc de todas las clases implementadas ha permitido una revisión general del código, refinando aspectos de modularidad e implementación, así como una profundización en las llamadas y métodos de las librerías empleadas.
+
+### Valoración general y conclusiones
+La realización de este proyecto ha resultado un reto realmente estimulante, por la cantidad de aspectos variados del desarrollo de aplicaciones que se involucran en él. Me ha permitido poner en práctica muchos tópicos que previamente había aprendido en otros módulos, pero sobre todo, aprender nuevos aspectos y rincones del mundo Android.
+
+
+
+
+
+
+
 
