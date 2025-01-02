@@ -65,7 +65,7 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 * **Gson (Google's JSON)**: Biblioteca de Java desarrollada por Google que se utiliza para convertir objetos JSON a objetos Java y viceversa. En esta aplicación se utiliza para convertir los objetos JSON descargados de la [**API Pokémon**](https://pokeapi.co/) a objetos Java empleados por la aplicación.
 * [**Firebase**](https://firebase.google.com/): Plataforma de almacenamiento en la nube que facilita el desarrollo de aplicaciones. Esta aplicación utiliza:
     * <ins>Authentication</ins> para la autenticación y gestión de usuarios. Concretamente se utiliza la inferfaz preconstruida de logueo provista por Firebase.
-    *<ins>Firestore database</ins>, base de datos No-SQL empleada para almacenar la colección de Pokémon de cada entrenador, así como el listado de *tipos de Pokémon* localizados al idioma español.
+    * <ins>Firestore database</ins>, base de datos No-SQL empleada para almacenar la colección de Pokémon de cada entrenador, así como el listado de *tipos de Pokémon* localizados al idioma español.
 * **SharedPreferences**: API Android que permite almacenar y recuperar datos clave-valor de forma persistente, ideal para guardar configuraciones o preferencias de usuario, de forma privada y persistente.
 * **Picasso**: Biblioteca de código abierto desarrollada por Square que facilita la carga y almacenamiento en caché de imágenes en aplicaciones Android. Empleada para descargar y manejar las imágenes de los Pokémon.
 * **Android Navigation**: Componente que facilita la implementación de la navegación en aplicaciones Android. Permite mover a los usuarios entre pantallas (en este caso, *fragments*) y gestionar elementos relacionados con la navegación, como el manejo de la pila de retroceso.
@@ -73,9 +73,21 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 * **RecyclerView**: Componente de interfaz de usuario utilizado para mostrar grandes conjuntos de datos de forma eficiente, en este caso en forma de lista. Ofrece flexibilidad y rendimiento al reutilizar vistas mediante un patrón llamado "ViewHolder". RecyclerView permite personalizar fácilmente la presentación de los elementos mediante LayoutManagers (en este caso CardViews). Su diseño modular lo hace ideal para listas complejas y dinámicas, con soporte nativo para arrastrar y soltar, y también para deslizamiento, tal y como se emplea en esta aplicación.
 
 
-
 ## INSTRUCCIONES DE USO
 
+1. En la [página principal del repositorio](https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM03/), hacer clic en el botón verde `<> code` y copiar la dirección HTTPS que aparece (`https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM03.git`).
+2. En Android Studio, utilizamos el menú: *File -> New... -> Project from Version Control...*.
+3. En el diálogo emergente, seleccionaremos:
+    * *Repository URL*
+    * *Version control: Git*
+    * *URL:* En este campo pegaremos la dirección previamente copiada.
+    * *Directory:* Directorio donde se descargará el proyecto.
+    * Haremos clic en el botón *Clone*.
+4. En unos segundos, tendremos el proyecto descargado en nuestro equipo.
+
+Los archivos `build.gradle.kts` (principalmente el de nivel de App) ya contienen referencias a las librerías o dependencias que necesita la aplicación para funcionar. Así, en el proceso de construcción (*Build*) del proyecto, el propio Android Studio obtendrá de manera transparente las librerías necesarias. No obstante, también puede lanzarse este proceso mediante la opción *File -> Sync Project with Gradle Files*.
+
+Para la ejecución de la aplicación es necesario disponer de un dispositivo emulador (puede usarse el *Device Manager* que provee Android Studio) con API mínima 24. Basta seleccionar el emulador deseado y utilizar la opción *Run -> Run 'App'*.
 
 
 ## CONCLUSIONES DEL DESARROLLADOR
