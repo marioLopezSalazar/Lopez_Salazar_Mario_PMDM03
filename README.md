@@ -2,7 +2,7 @@
 
 ## INTRODUCCIÓN
 
-**Pokémon MLS** es una aplicación que permite **simular la captura de Pokémon**, facilitando el acceso a la información básica de todos tus Pokémon capturados. Está desarrollada en Java para disposibivos Android, y presenta una interfaz muy visual, intuitiva y de ágil navegación.
+**Pokémon MLS** es una aplicación que permite **simular la captura de Pokémon**, facilitando el acceso a la información básica de todos tus Pokémon capturados. Está desarrollada en Java para dispositivos Android, y presenta una interfaz muy visual, intuitiva y de ágil navegación.
 
 La información del entrenador Pokémon se almacena en la nube, lo que le permite utilizar la aplicación en diferentes dispositivos sin perder sus avances.
 
