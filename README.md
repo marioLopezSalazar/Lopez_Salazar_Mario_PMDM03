@@ -62,7 +62,7 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
     | Hasta la 6ª generación |  1-721              |
     | Hasta la 7ª generación |  1-809              |
     | Hasta la 8ª generación |  1-905              |
-    | Hasta la 1ª generación |  1-1025             |
+    | Hasta la 9ª generación |  1-1025             |
   * **Cerrar sesión**: Opción de logout. Facilita, por ejemplo, que varios entrenadores puedan compartir el mismo dispositivo sin interferir.
   * **Eliminar usuario**: Permite eliminar el usuario de la aplicación.
   
